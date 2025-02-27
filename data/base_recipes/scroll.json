@@ -1,0 +1,785 @@
+[
+  {
+     "material2":"Oak Paper",
+     "material1":"Gudgeon Oil",
+     "name": "Gudgeon Oil + Oak Paper (Lvl. 1-9)",
+     "material2Amount":1,
+     "material1Amount":1,
+     "levelRange": {
+       "minimum": 1,
+       "maximum": 9
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":3,
+              "minimum":1
+           },
+           "id":"1-3",
+           "durationRange":{
+              "maximum":372,
+              "minimum":360
+           },
+           "hprRange":{
+              "maximum":26,
+              "minimum":21
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":5,
+              "minimum":3
+           },
+           "id":"3-5",
+           "durationRange":{
+              "maximum":384,
+              "minimum":372
+           },
+           "hprRange":{
+              "maximum":34,
+              "minimum":27
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":7,
+              "minimum":5
+           },
+           "id":"5-7",
+           "durationRange":{
+              "maximum":396,
+              "minimum":384
+           },
+           "hprRange":{
+              "maximum":41,
+              "minimum":35
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":9,
+              "minimum":7
+           },
+           "id":"7-9",
+           "durationRange":{
+              "maximum":408,
+              "minimum":396
+           },
+           "hprRange":{
+              "maximum":45,
+              "minimum":41
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Birch Paper",
+     "material1":"Trout Oil",
+     "name": "Birch Oil + Birch Paper (Lvl. 10-19)",
+     "material2Amount":2,
+     "material1Amount":2,
+     "levelRange": {
+       "minimum": 10,
+       "maximum": 19
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":13,
+              "minimum":10
+           },
+           "id":"10-13",
+           "durationRange":{
+              "maximum":432,
+              "minimum":414
+           },
+           "hprRange":{
+              "maximum":59,
+              "minimum":46
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":15,
+              "minimum":13
+           },
+           "id":"13-15",
+           "durationRange":{
+              "maximum":444,
+              "minimum":432
+           },
+           "hprRange":{
+              "maximum":73,
+              "minimum":60
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":17,
+              "minimum":15
+           },
+           "id":"15-17",
+           "durationRange":{
+              "maximum":456,
+              "minimum":444
+           },
+           "hprRange":{
+              "maximum":84,
+              "minimum":73
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":19,
+              "minimum":17
+           },
+           "id":"17-19",
+           "durationRange":{
+              "maximum":468,
+              "minimum":456
+           },
+           "hprRange":{
+              "maximum":92,
+              "minimum":84
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Willow Paper",
+     "material1":"Salmon Oil",
+     "name": "Salmon Oil + Willow Paper (Lvl. 20-29)",
+     "material2Amount":2,
+     "material1Amount":2,
+     "levelRange": {
+       "minimum": 20,
+       "maximum": 29
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":23,
+              "minimum":20
+           },
+           "id":"20-23",
+           "durationRange":{
+              "maximum":492,
+              "minimum":474
+           },
+           "hprRange":{
+              "maximum":109,
+              "minimum":89
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":25,
+              "minimum":23
+           },
+           "id":"23-25",
+           "durationRange":{
+              "maximum":504,
+              "minimum":492
+           },
+           "hprRange":{
+              "maximum":128,
+              "minimum":109
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":27,
+              "minimum":25
+           },
+           "id":"25-27",
+           "durationRange":{
+              "maximum":516,
+              "minimum":504
+           },
+           "hprRange":{
+              "maximum":151,
+              "minimum":128
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":29,
+              "minimum":27
+           },
+           "id":"27-29",
+           "durationRange":{
+              "maximum":528,
+              "minimum":516
+           },
+           "hprRange":{
+              "maximum":174,
+              "minimum":151
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Acacia Paper",
+     "material1":"Carp Oil",
+     "name": "Carp Oil + Acacia Paper (Lvl. 30-39)",
+     "material2Amount":3,
+     "material1Amount":3,
+     "levelRange": {
+       "minimum": 30,
+       "maximum": 39
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":33,
+              "minimum":30
+           },
+           "id":"30-33",
+           "durationRange":{
+              "maximum":552,
+              "minimum":534
+           },
+           "hprRange":{
+              "maximum":212,
+              "minimum":181
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":35,
+              "minimum":33
+           },
+           "id":"33-35",
+           "durationRange":{
+              "maximum":564,
+              "minimum":552
+           },
+           "hprRange":{
+              "maximum":243,
+              "minimum":212
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":37,
+              "minimum":35
+           },
+           "id":"35-37",
+           "durationRange":{
+              "maximum":576,
+              "minimum":564
+           },
+           "hprRange":{
+              "maximum":286,
+              "minimum":243
+           }
+        },
+        
+        {
+           "levelRange":{
+              "maximum":39,
+              "minimum":37
+           },
+           "id":"37-39",
+           "durationRange":{
+              "maximum":588,
+              "minimum":576
+           },
+           "hprRange":{
+              "maximum":328,
+              "minimum":286
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Spruce Paper",
+     "material1":"Icefish Oil",
+     "name": "Icefish Oil + Spruce Paper (Lvl. 40-49)",
+     "material2Amount":3,
+     "material1Amount":3,
+     "levelRange": {
+       "minimum": 40,
+       "maximum": 49
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":43,
+              "minimum":40
+           },
+           "id":"40-43",
+           "durationRange":{
+              "maximum":612,
+              "minimum":594
+           },
+           "hprRange":{
+              "maximum":389,
+              "minimum":335
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":45,
+              "minimum":43
+           },
+           "id":"43-45",
+           "durationRange":{
+              "maximum":624,
+              "minimum":612
+           },
+           "hprRange":{
+              "maximum":443,
+              "minimum":389
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":47,
+              "minimum":45
+           },
+           "id":"45-47",
+           "durationRange":{
+              "maximum":636,
+              "minimum":624
+           },
+           "hprRange":{
+              "maximum":509,
+              "minimum":443
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":49,
+              "minimum":47
+           },
+           "id":"47-49",
+           "durationRange":{
+              "maximum":648,
+              "minimum":636
+           },
+           "hprRange":{
+              "maximum":574,
+              "minimum":509
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Jungle Paper",
+     "material1":"Piranha Oil",
+     "name": "Piranha Oil + Jungle Paper (Lvl. 50-59)",
+     "material2Amount":4,
+     "material1Amount":4,
+     "levelRange": {
+       "minimum": 50,
+       "maximum": 59
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":53,
+              "minimum":50
+           },
+           "id":"50-53",
+           "durationRange":{
+              "maximum":672,
+              "minimum":654
+           },
+           "hprRange":{
+              "maximum":702,
+              "minimum":590
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":55,
+              "minimum":53
+           },
+           "id":"53-55",
+           "durationRange":{
+              "maximum":684,
+              "minimum":672
+           },
+           "hprRange":{
+              "maximum":813,
+              "minimum":702
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":57,
+              "minimum":55
+           },
+           "id":"55-57",
+           "durationRange":{
+              "maximum":696,
+              "minimum":684
+           },
+           "hprRange":{
+              "maximum":898,
+              "minimum":813
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":59,
+              "minimum":57
+           },
+           "id":"57-59",
+           "durationRange":{
+              "maximum":708,
+              "minimum":696
+           },
+           "hprRange":{
+              "maximum":982,
+              "minimum":898
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Dark Paper",
+     "material1":"Koi Oil",
+     "name": "Koi Oil + Dark Paper (Lvl. 60-69)",
+     "material2Amount":4,
+     "material1Amount":4,
+     "levelRange": {
+       "minimum": 60,
+       "maximum": 69
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":63,
+              "minimum":60
+           },
+           "id":"60-63",
+           "durationRange":{
+              "maximum":732,
+              "minimum":714
+           },
+           "hprRange":{
+              "maximum":1082,
+              "minimum":998
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":65,
+              "minimum":63
+           },
+           "id":"63-65",
+           "durationRange":{
+              "maximum":744,
+              "minimum":732
+           },
+           "hprRange":{
+              "maximum":1167,
+              "minimum":1082
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":67,
+              "minimum":65
+           },
+           "id":"65-67",
+           "durationRange":{
+              "maximum":756,
+              "minimum":744
+           },
+           "hprRange":{
+              "maximum":1275,
+              "minimum":1167
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":69,
+              "minimum":67
+           },
+           "id":"67-69",
+           "durationRange":{
+              "maximum":768,
+              "minimum":756
+           },
+           "hprRange":{
+              "maximum":1383,
+              "minimum":1275
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Light Paper",
+     "material1":"Gylia Oil",
+     "name": "Gylia Oil + Light Paper (Lvl. 70-79)",
+     "material2Amount":5,
+     "material1Amount":5,
+     "levelRange": {
+       "minimum": 70,
+       "maximum": 79
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":73,
+              "minimum":70
+           },
+           "id":"70-73",
+           "durationRange":{
+              "maximum":792,
+              "minimum":774
+           },
+           "hprRange":{
+              "maximum":1552,
+              "minimum":1398
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":75,
+              "minimum":73
+           },
+           "id":"73-75",
+           "durationRange":{
+              "maximum":804,
+              "minimum":792
+           },
+           "hprRange":{
+              "maximum":1706,
+              "minimum":1552
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":77,
+              "minimum":75
+           },
+           "id":"75-77",
+           "durationRange":{
+              "maximum":816,
+              "minimum":804
+           },
+           "hprRange":{
+              "maximum":1806,
+              "minimum":1706
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":79,
+              "minimum":77
+           },
+           "id":"77-79",
+           "durationRange":{
+              "maximum":828,
+              "minimum":816
+           },
+           "hprRange":{
+              "maximum":1906,
+              "minimum":1806
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Pine Paper",
+     "material1":"Bass Oil",
+     "name": "Bass Oil + Pine Paper (Lvl. 80-89)",
+     "material2Amount":5,
+     "material1Amount":5,"levelRange": {
+       "minimum": 80,
+       "maximum": 89
+   },
+     "levels":[
+      {
+          "levelRange":{
+             "maximum":83,
+             "minimum":80
+          },
+          "id":"80-83",
+          "durationRange":{
+             "maximum":852,
+             "minimum":834
+          },
+          "hprRange":{
+             "maximum":2053,
+             "minimum":1937
+          }
+       },
+        {
+           "levelRange":{
+              "maximum":85,
+              "minimum":83
+           },
+           "id":"83-85",
+           "durationRange":{
+              "maximum":864,
+              "minimum":852
+           },
+           "hprRange":{
+              "maximum":2168,
+              "minimum":2053
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":87,
+              "minimum":85
+           },
+           "id":"85-87",
+           "durationRange":{
+              "maximum":876,
+              "minimum":864
+           },
+           "hprRange":{
+              "maximum":2330,
+              "minimum":2168
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":89,
+              "minimum":87
+           },
+           "id":"87-89",
+           "durationRange":{
+              "maximum":888,
+              "minimum":876
+           },
+           "hprRange":{
+              "maximum":2491,
+              "minimum":2330
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Avo Paper",
+     "material1":"Molten Oil",
+     "name": "Molten Oil + Avo Paper (Lvl. 90-99)",
+     "material2Amount":6,
+     "material1Amount":6,"levelRange": {
+       "minimum": 90,
+       "maximum": 99
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":93,
+              "minimum":90
+           },
+           "id":"90-93",
+           "durationRange":{
+              "maximum":912,
+              "minimum":894
+           },
+           "hprRange":{
+              "maximum":2688,
+              "minimum":2515
+           }
+        },
+        {
+          "levelRange":{
+             "maximum":95,
+             "minimum":93
+          },
+          "id":"93-95",
+          "durationRange":{
+             "maximum":924,
+             "minimum":912
+          },
+          "hprRange":{
+             "maximum":2861,
+             "minimum":2688
+          }
+       },
+        {
+           "levelRange":{
+              "maximum":97,
+              "minimum":95
+           },
+           "id":"95-97",
+           "durationRange":{
+              "maximum":936,
+              "minimum":924
+           },
+           "hprRange":{
+              "maximum":3131,
+              "minimum":2861
+           }
+        },
+        {
+           "levelRange":{
+              "maximum":99,
+              "minimum":97
+           },
+           "id":"97-99",
+           "durationRange":{
+              "maximum":948,
+              "minimum":936
+           },
+           "hprRange":{
+              "maximum":3400,
+              "minimum":3131
+           }
+        }
+     ]
+  },
+  {
+     "material2":"Sky Paper",
+     "material1":"Starfish Oil",
+     "name": "Starfish Oil + Sky Paper (Lvl. 100-103)",
+     "material2Amount":6,
+     "material1Amount":6,"levelRange": {
+       "minimum": 100,
+       "maximum": 103
+   },
+     "levels":[
+        {
+           "levelRange":{
+              "maximum":103,
+              "minimum":100
+           },
+           "id":"100-103",
+           "durationRange":{
+              "maximum":960,
+              "minimum":954
+           },
+           "hprRange":{
+              "maximum":3532,
+              "minimum":3477
+           }
+        }
+     ]
+  },
+  {
+      "material2":"Dernic Paper",
+      "material1":"Dernic Oil",
+      "name": "Dernic Oil + Dernic Paper (Lvl. 103-105)",
+      "material2Amount":6,
+      "material1Amount":6,"levelRange": {
+       "minimum": 103,
+       "maximum": 105
+   },
+      "levels":[
+         {
+            "levelRange":{
+               "maximum":105,
+               "minimum":103
+            },
+            "id":"103-105",
+            "durationRange":{
+              "minimum": 960,
+              "maximum": 964
+            },
+            "hprRange":{
+              "minimum": 3540,
+              "maximum": 3600
+            }
+         }
+      ]
+   }
+]

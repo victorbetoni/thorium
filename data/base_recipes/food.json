@@ -1,0 +1,784 @@
+[
+  {
+      "material2": "Wheat Grains",
+      "material1": "Gudgeon Meat",
+      "name": "Gudgeon Meat + Wheat Grains (Lvl. 1-9)",
+      "material2Amount": 1,
+      "material1Amount": 2,
+      "levelRange": {
+          "minimum": 1,
+          "maximum": 9
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 3,
+                  "minimum": 1
+              },
+              "id": "1-3",
+              "durationRange": {
+                  "maximum": 1116,
+                  "minimum": 1080
+              },
+              "hprRange": {
+                  "maximum": 32,
+                  "minimum": 24
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 5,
+                  "minimum": 3
+              },
+              "id": "3-5",
+              "durationRange": {
+                  "maximum": 1152,
+                  "minimum": 1116
+              },
+              "hprRange": {
+                  "maximum": 42,
+                  "minimum": 33
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 7,
+                  "minimum": 5
+              },
+              "id": "5-7",
+              "durationRange": {
+                  "maximum": 1188,
+                  "minimum": 1152
+              },
+              "hprRange": {
+                  "maximum": 54,
+                  "minimum": 43
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 9,
+                  "minimum": 7
+              },
+              "id": "7-9",
+              "durationRange": {
+                  "maximum": 1224,
+                  "minimum": 1188
+              },
+              "hprRange": {
+                  "maximum": 59,
+                  "minimum": 54
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Barley Grains",
+      "material1": "Trout Meat",
+      "name": "Trout Meat + Barley Grains (Lvl. 10-19)",
+      "material2Amount": 2,
+      "material1Amount": 4,
+      "levelRange": {
+          "minimum": 10,
+          "maximum": 19
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 13,
+                  "minimum": 10
+              },
+              "id": "10-13",
+              "durationRange": {
+                  "maximum": 1296,
+                  "minimum": 1242
+              },
+              "hprRange": {
+                  "maximum": 79,
+                  "minimum": 60
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 15,
+                  "minimum": 13
+              },
+              "id": "13-15",
+              "durationRange": {
+                  "maximum": 1332,
+                  "minimum": 1296
+              },
+              "hprRange": {
+                  "maximum": 99,
+                  "minimum": 79
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 17,
+                  "minimum": 15
+              },
+              "id": "15-17",
+              "durationRange": {
+                  "maximum": 1368,
+                  "minimum": 1332
+              },
+              "hprRange": {
+                  "maximum": 113,
+                  "minimum": 99
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 19,
+                  "minimum": 17
+              },
+              "id": "17-19",
+              "durationRange": {
+                  "maximum": 1404,
+                  "minimum": 1368
+              },
+              "hprRange": {
+                  "maximum": 128,
+                  "minimum": 113
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Oat Grains",
+      "material1": "Salmon Meat",
+      "name": "Salmon Meat + Oat Grains (Lvl. 20-29)",
+      "material2Amount": 2,
+      "material1Amount": 4,
+      "levelRange": {
+          "minimum": 20,
+          "maximum": 29
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 23,
+                  "minimum": 20
+              },
+              "id": "20-23",
+              "durationRange": {
+                  "maximum": 1476,
+                  "minimum": 1422
+              },
+              "hprRange": {
+                  "maximum": 150,
+                  "minimum": 122
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 25,
+                  "minimum": 23
+              },
+              "id": "23-25",
+              "durationRange": {
+                  "maximum": 1512,
+                  "minimum": 1476
+              },
+              "hprRange": {
+                  "maximum": 177,
+                  "minimum": 150
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 27,
+                  "minimum": 25
+              },
+              "id": "25-27",
+              "durationRange": {
+                  "maximum": 1548,
+                  "minimum": 1512
+              },
+              "hprRange": {
+                  "maximum": 210,
+                  "minimum": 177
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 29,
+                  "minimum": 27
+              },
+              "id": "27-29",
+              "durationRange": {
+                  "maximum": 1584,
+                  "minimum": 1548
+              },
+              "hprRange": {
+                  "maximum": 243,
+                  "minimum": 210
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Malt Grains",
+      "material1": "Carp Meat",
+      "name": "Carp Meat + Malt Grains (Lvl. 30-39)",
+      "material2Amount": 3,
+      "material1Amount": 6,
+      "levelRange": {
+          "minimum": 30,
+          "maximum": 39
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 33,
+                  "minimum": 30
+              },
+              "id": "30-33",
+              "durationRange": {
+                  "maximum": 1656,
+                  "minimum": 1602
+              },
+              "hprRange": {
+                  "maximum": 298,
+                  "minimum": 254
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 35,
+                  "minimum": 33
+              },
+              "id": "33-35",
+              "durationRange": {
+                  "maximum": 1692,
+                  "minimum": 1656
+              },
+              "hprRange": {
+                  "maximum": 342,
+                  "minimum": 298
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 37,
+                  "minimum": 35
+              },
+              "id": "35-37",
+              "durationRange": {
+                  "maximum": 1728,
+                  "minimum": 1692
+              },
+              "hprRange": {
+                  "maximum": 403,
+                  "minimum": 342
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 39,
+                  "minimum": 37
+              },
+              "id": "37-39",
+              "durationRange": {
+                  "maximum": 1764,
+                  "minimum": 1728
+              },
+              "hprRange": {
+                  "maximum": 463,
+                  "minimum": 403
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Hops Grains",
+      "material1": "Icefish Meat",
+      "name": "Icefish Meat + Hops Grains (Lvl. 40-49)",
+      "material2Amount": 3,
+      "material1Amount": 6,
+      "levelRange": {
+          "minimum": 40,
+          "maximum": 49
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 43,
+                  "minimum": 40
+              },
+              "id": "40-43",
+              "durationRange": {
+                  "maximum": 1836,
+                  "minimum": 1782
+              },
+              "hprRange": {
+                  "maximum": 551,
+                  "minimum": 474
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 45,
+                  "minimum": 43
+              },
+              "id": "43-45",
+              "durationRange": {
+                  "maximum": 1872,
+                  "minimum": 1836
+              },
+              "hprRange": {
+                  "maximum": 628,
+                  "minimum": 551
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 47,
+                  "minimum": 45
+              },
+              "id": "45-47",
+              "durationRange": {
+                  "maximum": 1908,
+                  "minimum": 1872
+              },
+              "hprRange": {
+                  "maximum": 722,
+                  "minimum": 628
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 49,
+                  "minimum": 47
+              },
+              "id": "47-49",
+              "durationRange": {
+                  "maximum": 1944,
+                  "minimum": 1908
+              },
+              "hprRange": {
+                  "maximum": 815,
+                  "minimum": 722
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Rye Grains",
+      "material1": "Piranha Meat",
+      "name": "Piranha Meat + Rye Grains (Lvl. 50-59)",
+      "material2Amount": 4,
+      "material1Amount": 8,
+      "levelRange": {
+          "minimum": 50,
+          "maximum": 59
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 53,
+                  "minimum": 50
+              },
+              "id": "50-53",
+              "durationRange": {
+                  "maximum": 2016,
+                  "minimum": 1962
+              },
+              "hprRange": {
+                  "maximum": 997,
+                  "minimum": 837
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 55,
+                  "minimum": 53
+              },
+              "id": "53-55",
+              "durationRange": {
+                  "maximum": 2052,
+                  "minimum": 2022
+              },
+              "hprRange": {
+                  "maximum": 1156,
+                  "minimum": 997
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 57,
+                  "minimum": 55
+              },
+              "id": "55-57",
+              "durationRange": {
+                  "maximum": 2088,
+                  "minimum": 2052
+              },
+              "hprRange": {
+                  "maximum": 1277,
+                  "minimum": 1156
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 59,
+                  "minimum": 57
+              },
+              "id": "57-59",
+              "durationRange": {
+                  "maximum": 2124,
+                  "minimum": 2088
+              },
+              "hprRange": {
+                  "maximum": 1398,
+                  "minimum": 1277
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Millet Grains",
+      "material1": "Koi Meat",
+      "name": "Koi Meat + Millet Grains (Lvl. 60-69)",
+      "material2Amount": 4,
+      "material1Amount": 8,
+      "levelRange": {
+          "minimum": 60,
+          "maximum": 69
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 63,
+                  "minimum": 60
+              },
+              "id": "60-63",
+              "durationRange": {
+                  "maximum": 2196,
+                  "minimum": 2142
+              },
+              "hprRange": {
+                  "maximum": 1541,
+                  "minimum": 1420
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 65,
+                  "minimum": 63
+              },
+              "id": "63-65",
+              "durationRange": {
+                  "maximum": 2232,
+                  "minimum": 2196
+              },
+              "hprRange": {
+                  "maximum": 1662,
+                  "minimum": 1541
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 67,
+                  "minimum": 65
+              },
+              "id": "65-67",
+              "durationRange": {
+                  "maximum": 2268,
+                  "minimum": 2232
+              },
+              "hprRange": {
+                  "maximum": 1816,
+                  "minimum": 1662
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 69,
+                  "minimum": 67
+              },
+              "id": "67-69",
+              "durationRange": {
+                  "maximum": 2304,
+                  "minimum": 2268
+              },
+              "hprRange": {
+                  "maximum": 1882,
+                  "minimum": 1816
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Decay Grains",
+      "material1": "Gylia Meat",
+      "name": "Gylia Meat + Decay Grains (Lvl. 70-79)",
+      "material2Amount": 5,
+      "material1Amount": 10,
+      "levelRange": {
+          "minimum": 70,
+          "maximum": 79
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 73,
+                  "minimum": 70
+              },
+              "id": "70-73",
+              "durationRange": {
+                  "maximum": 2376,
+                  "minimum": 2322
+              },
+              "hprRange": {
+                  "maximum": 2212,
+                  "minimum": 1992
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 75,
+                  "minimum": 73
+              },
+              "id": "73-75",
+              "durationRange": {
+                  "maximum": 2412,
+                  "minimum": 2376
+              },
+              "hprRange": {
+                  "maximum": 2432,
+                  "minimum": 2212
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 77,
+                  "minimum": 75
+              },
+              "id": "75-77",
+              "durationRange": {
+                  "maximum": 2448,
+                  "minimum": 2412
+              },
+              "hprRange": {
+                  "maximum": 2575,
+                  "minimum": 2432
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 79,
+                  "minimum": 77
+              },
+              "id": "77-79",
+              "durationRange": {
+                  "maximum": 2484,
+                  "minimum": 2448
+              },
+              "hprRange": {
+                  "maximum": 2718,
+                  "minimum": 2575
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Rice Grains",
+      "material1": "Bass Meat",
+      "name": "Bass Meat + Rice Grains (Lvl. 80-89)",
+      "material2Amount": 5,
+      "material1Amount": 10,"levelRange": {
+          "minimum": 80,
+          "maximum": 89
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 83,
+                  "minimum": 80
+              },
+              "id": "80-83",
+              "durationRange": {
+                  "maximum": 2556,
+                  "minimum": 2502
+              },
+              "hprRange": {
+                  "maximum": 2927,
+                  "minimum": 2762
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 85,
+                  "minimum": 83
+              },
+              "id": "83-85",
+              "durationRange": {
+                  "maximum": 2592,
+                  "minimum": 2556
+              },
+              "hprRange": {
+                  "maximum": 3092,
+                  "minimum": 2927
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 87,
+                  "minimum": 85
+              },
+              "id": "85-87",
+              "durationRange": {
+                  "maximum": 2628,
+                  "minimum": 2592
+              },
+              "hprRange": {
+                  "maximum": 3323,
+                  "minimum": 3092
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 89,
+                  "minimum": 87
+              },
+              "id": "87-89",
+              "durationRange": {
+                  "maximum": 2664,
+                  "minimum": 2628
+              },
+              "hprRange": {
+                  "maximum": 3554,
+                  "minimum": 3323
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Sorghum Grains",
+      "material1": "Molten Meat",
+      "name": "Molten Meat + Sorghum Grains (Lvl. 90-99)",
+      "material2Amount": 6,
+      "material1Amount": 12,"levelRange": {
+          "minimum": 90,
+          "maximum": 99
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 93,
+                  "minimum": 90
+              },
+              "id": "90-93",
+              "durationRange": {
+                  "maximum": 2736,
+                  "minimum": 2682
+              },
+              "hprRange": {
+                  "maximum": 3835,
+                  "minimum": 3587
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 95,
+                  "minimum": 93
+              },
+              "id": "93-95",
+              "durationRange": {
+                  "maximum": 2772,
+                  "minimum": 2736
+              },
+              "hprRange": {
+                  "maximum": 4082,
+                  "minimum": 3835
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 97,
+                  "minimum": 95
+              },
+              "id": "95-97",
+              "durationRange": {
+                  "maximum": 2808,
+                  "minimum": 2772
+              },
+              "hprRange": {
+                  "maximum": 4467,
+                  "minimum": 4082
+              }
+          },
+          {
+              "levelRange": {
+                  "maximum": 99,
+                  "minimum": 97
+              },
+              "id": "97-99",
+              "durationRange": {
+                  "maximum": 2844,
+                  "minimum": 2808
+              },
+              "hprRange": {
+                  "maximum": 4852,
+                  "minimum": 4467
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Hemp Grains",
+      "material1": "Starfish Meat",
+      "name": "Starfish Meat + Hemp Grains (Lvl. 100-103)",
+      "material2Amount": 6,
+      "material1Amount": 12,"levelRange": {
+          "minimum": 100,
+          "maximum": 103
+      },
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 103,
+                  "minimum": 100
+              },
+              "id": "100-103",
+              "durationRange": {
+                  "maximum": 2880,
+                  "minimum": 2862
+              },
+              "hprRange": {
+                  "maximum": 5072,
+                  "minimum": 4962
+              }
+          }
+      ]
+  },
+  {
+      "material2": "Dernic Grains",
+      "material1": "Dernic Meat",
+      "name": "Dernic Meat + Dernic Grains (Lvl. 103-105)",
+      "material2Amount": 6,"levelRange": {
+          "minimum": 103,
+          "maximum": 105
+      },
+      "material1Amount": 12,
+      "levels": [
+          {
+              "levelRange": {
+                  "maximum": 105,
+                  "minimum": 103
+              },
+              "id": "103-105",
+              "durationRange": {
+                  "minimum": 2880,
+                  "maximum": 2900
+              },
+              "hprRange": {
+                  "minimum": 5072,
+                  "maximum": 5170
+              }
+          }
+      ]
+  }
+]

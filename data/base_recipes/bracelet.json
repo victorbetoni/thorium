@@ -1,0 +1,784 @@
+[
+  {
+     "material2": "Gudgeon Oil",
+     "material1": "Copper Gem",
+     "material2Amount": 1,
+     "name": "Copper Gem + Gudgeon Oil (Lvl. 1 - 9)",
+     "material1Amount": 2,
+     "levelRange": {
+        "minimum": 1,
+        "maximum": 9
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 3,
+              "minimum": 1
+           },
+           "id": "1-3",
+           "durabilityRange": {
+              "maximum": 182,
+              "minimum": 175
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 5,
+              "minimum": 3
+           },
+           "id": "3-5",
+           "durabilityRange": {
+              "maximum": 189,
+              "minimum": 182
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 7,
+              "minimum": 5
+           },
+           "id": "5-7",
+           "durabilityRange": {
+              "maximum": 196,
+              "minimum": 189
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 9,
+              "minimum": 7
+           },
+           "id": "7-9",
+           "durabilityRange": {
+              "maximum": 203,
+              "minimum": 196
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Trout Oil",
+     "material1": "Granite Gem",
+     "material2Amount": 2,
+     "name": "Granite Gem + Trout Oil (Lvl. 10 - 19)",
+     "material1Amount": 4,
+     "levelRange": {
+        "minimum": 10,
+        "maximum": 19
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 13,
+              "minimum": 10
+           },
+           "id": "10-13",
+           "durabilityRange": {
+              "maximum": 217,
+              "minimum": 207
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 15,
+              "minimum": 13
+           },
+           "id": "13-15",
+           "durabilityRange": {
+              "maximum": 224,
+              "minimum": 217
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 17,
+              "minimum": 15
+           },
+           "id": "15-17",
+           "durabilityRange": {
+              "maximum": 231,
+              "minimum": 224
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 19,
+              "minimum": 17
+           },
+           "id": "17-19",
+           "durabilityRange": {
+              "maximum": 238,
+              "minimum": 231
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Salmon Oil",
+     "material1": "Gold Gem",
+     "material2Amount": 2,
+     "name": "Gold Gem + Salmon Oil (Lvl. 20 - 29)",
+     "material1Amount": 4,
+     "levelRange": {
+        "minimum": 20,
+        "maximum": 29
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 23,
+              "minimum": 20
+           },
+           "id": "20-23",
+           "durabilityRange": {
+              "maximum": 252,
+              "minimum": 242
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 25,
+              "minimum": 23
+           },
+           "id": "23-25",
+           "durabilityRange": {
+              "maximum": 259,
+              "minimum": 252
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 27,
+              "minimum": 25
+           },
+           "id": "25-27",
+           "durabilityRange": {
+              "maximum": 266,
+              "minimum": 259
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 29,
+              "minimum": 27
+           },
+           "id": "27-29",
+           "durabilityRange": {
+              "maximum": 273,
+              "minimum": 266
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Carp Oil",
+     "material1": "Sandstone Gem",
+     "material2Amount": 3,
+     "name": "Sandstone Gem + Carp Oil (Lvl. 30 - 39)",
+     "material1Amount": 6,
+     "levelRange": {
+        "minimum": 30,
+        "maximum": 39
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 33,
+              "minimum": 30
+           },
+           "id": "30-33",
+           "durabilityRange": {
+              "maximum": 287,
+              "minimum": 277
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 35,
+              "minimum": 33
+           },
+           "id": "33-35",
+           "durabilityRange": {
+              "maximum": 294,
+              "minimum": 287
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 37,
+              "minimum": 35
+           },
+           "id": "35-37",
+           "durabilityRange": {
+              "maximum": 301,
+              "minimum": 294
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 39,
+              "minimum": 37
+           },
+           "id": "37-39",
+           "durabilityRange": {
+              "maximum": 308,
+              "minimum": 301
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Icefish Oil",
+     "material1": "Iron Gem",
+     "material2Amount": 3,
+     "name": "Iron Gem + Icefish Oil (Lvl. 40 - 49)",
+     "material1Amount": 6,
+     "levelRange": {
+        "minimum": 40,
+        "maximum": 49
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 43,
+              "minimum": 40
+           },
+           "id": "40-43",
+           "durabilityRange": {
+              "maximum": 322,
+              "minimum": 312
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 45,
+              "minimum": 43
+           },
+           "id": "43-45",
+           "durabilityRange": {
+              "maximum": 329,
+              "minimum": 322
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 47,
+              "minimum": 45
+           },
+           "id": "45-47",
+           "durabilityRange": {
+              "maximum": 336,
+              "minimum": 329
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 49,
+              "minimum": 47
+           },
+           "id": "47-49",
+           "durabilityRange": {
+              "maximum": 343,
+              "minimum": 336
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Piranha Oil",
+     "material1": "Silver Gem",
+     "material2Amount": 4,
+     "name": "Silver Gem + Piranha Oil (Lvl. 50 - 59)",
+     "material1Amount": 8,
+     "levelRange": {
+        "minimum": 50,
+        "maximum": 59
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 53,
+              "minimum": 50
+           },
+           "id": "50-53",
+           "durabilityRange": {
+              "maximum": 357,
+              "minimum": 347
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 55,
+              "minimum": 53
+           },
+           "id": "53-55",
+           "durabilityRange": {
+              "maximum": 364,
+              "minimum": 357
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 57,
+              "minimum": 55
+           },
+           "id": "55-57",
+           "durabilityRange": {
+              "maximum": 371,
+              "minimum": 364
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 59,
+              "minimum": 57
+           },
+           "id": "57-59",
+           "durabilityRange": {
+              "maximum": 378,
+              "minimum": 371
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Koi Oil",
+     "material1": "Cobalt Gem",
+     "material2Amount": 4,
+     "name": "Cobalt Gem + Koi Oil (Lvl. 60 - 69)",
+     "material1Amount": 8,
+     "levelRange": {
+        "minimum": 60,
+        "maximum": 69
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 63,
+              "minimum": 60
+           },
+           "id": "60-63",
+           "durabilityRange": {
+              "maximum": 392,
+              "minimum": 382
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 65,
+              "minimum": 63
+           },
+           "id": "63-65",
+           "durabilityRange": {
+              "maximum": 399,
+              "minimum": 392
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 67,
+              "minimum": 65
+           },
+           "id": "65-67",
+           "durabilityRange": {
+              "maximum": 406,
+              "minimum": 399
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 69,
+              "minimum": 67
+           },
+           "id": "67-69",
+           "durabilityRange": {
+              "maximum": 413,
+              "minimum": 406
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Gylia Oil",
+     "material1": "Kanderstone Gem",
+     "material2Amount": 5,
+     "name": "Kanderstone Gem + Gylia Oil (Lvl. 70 - 79)",
+     "material1Amount": 10,
+     "levelRange": {
+        "minimum": 70,
+        "maximum": 79
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 73,
+              "minimum": 70
+           },
+           "id": "70-73",
+           "durabilityRange": {
+              "maximum": 427,
+              "minimum": 417
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 75,
+              "minimum": 73
+           },
+           "id": "73-75",
+           "durabilityRange": {
+              "maximum": 434,
+              "minimum": 427
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 77,
+              "minimum": 75
+           },
+           "id": "75-77",
+           "durabilityRange": {
+              "maximum": 441,
+              "minimum": 434
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 79,
+              "minimum": 77
+           },
+           "id": "77-79",
+           "durabilityRange": {
+              "maximum": 448,
+              "minimum": 441
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Bass Oil",
+     "material1": "Diamond Gem",
+     "material2Amount": 5,
+     "name": "Diamond Gem + Bass Oil (Lvl. 80 - 89)",
+     "material1Amount": 10,"levelRange": {
+        "minimum": 80,
+        "maximum": 89
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 83,
+              "minimum": 80
+           },
+           "id": "80-83",
+           "durabilityRange": {
+              "maximum": 462,
+              "minimum": 452
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 85,
+              "minimum": 83
+           },
+           "id": "83-85",
+           "durabilityRange": {
+              "maximum": 469,
+              "minimum": 462
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 87,
+              "minimum": 85
+           },
+           "id": "85-87",
+           "durabilityRange": {
+              "maximum": 476,
+              "minimum": 469
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 89,
+              "minimum": 87
+           },
+           "id": "87-89",
+           "durabilityRange": {
+              "maximum": 483,
+              "minimum": 476
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Molten Oil",
+     "material1": "Molten Gem",
+     "material2Amount": 6,
+     "name": "Molten Gem + Molten Oil (Lvl. 90 - 99)",
+     "material1Amount": 12,"levelRange": {
+        "minimum": 90,
+        "maximum": 99
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 93,
+              "minimum": 90
+           },
+           "id": "90-93",
+           "durabilityRange": {
+              "maximum": 497,
+              "minimum": 487
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 95,
+              "minimum": 93
+           },
+           "id": "93-95",
+           "durabilityRange": {
+              "maximum": 504,
+              "minimum": 497
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 97,
+              "minimum": 95
+           },
+           "id": "95-97",
+           "durabilityRange": {
+              "maximum": 511,
+              "minimum": 504
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        },
+        {
+           "levelRange": {
+              "maximum": 99,
+              "minimum": 97
+           },
+           "id": "97-99",
+           "durabilityRange": {
+              "maximum": 518,
+              "minimum": 511
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Starfish Oil",
+     "material1": "Voidstone Gem",
+     "material2Amount": 6,
+     "name": "Voidstone Gem + Starfish Oil (Lvl. 100 - 103)",
+     "material1Amount": 12,"levelRange": {
+        "minimum": 100,
+        "maximum": 103
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 103,
+              "minimum": 100
+           },
+           "id": "100-103",
+           "durabilityRange": {
+              "maximum": 525,
+              "minimum": 522
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  },
+  {
+     "material2": "Dernic Oil",
+     "material1": "Dernic Gem",
+     "material2Amount": 6,
+     "name": "Dernic Gem + Dernic Oil (Lvl. 103 - 105)",
+     "material1Amount": 12,"levelRange": {
+        "minimum": 103,
+        "maximum": 105
+    },
+     "levels": [
+        {
+           "levelRange": {
+              "maximum": 105,
+              "minimum": 103
+           },
+           "id": "103-105",
+           "durabilityRange": {
+              "maximum": 525,
+              "minimum": 522
+           },
+           "hpRange": {
+              "maximum": 0,
+              "minimum": 0
+           }
+        }
+     ]
+  }
+]

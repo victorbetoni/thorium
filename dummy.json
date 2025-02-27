@@ -1,0 +1,22 @@
+{
+  "type": "Leggings-103-105",
+  "max_reqs": [40,100,60,0,0],
+  "material_tiers": [3,3],
+  "pool_size": 10,
+  "minimum_durability": 10,
+  "include_all_effectiveness_items": true,
+  "ingredient_whitelist": [
+    "",""
+  ],
+  "stat_weights": {
+    "spellDamage": 1.2,
+    "airDamage": 1.5
+  },
+  "minimum_stat_values": {
+    "spellDamage": 30,
+    "airDamage": 40
+  },
+  "discard_conditions": {
+    "spellDamage": "> 80"
+  }
+}
