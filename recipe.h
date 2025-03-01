@@ -8,25 +8,21 @@ typedef float EffectivenessArray[6];
 #include "recipe_model.h"
 #include "ingredient.h"
 
-struct Recipe {
+struct DeviceRecipe {
+	RecipeModel model;
 	int base_duration;
 	int base_durability;
 	int material1_tier;
 	int material2_tier;
-	RecipeModel model;
-	EffectivenessArray* effectiveness_array;
-	std::vector<Ingredient> ingredients;
+	EffectivenessArray effectiveness_array;
+	DeviceIngredient* ingredients[6];
 
 	bool is_consumable() const {
 		return model.id.start("Potion") || model.id.starts_with("Scroll") || model.id.starts_with("Food");
 	}
 
 	EffectivenessArray* calc_effectiveness_array() const {
-		if (effectiveness_array != NULL) {
-			return effectiveness_array;
-		}
 		EffectivenessArray arr = { 100, 100, 100, 100, 100, 100 };
-
 	}
 };
 

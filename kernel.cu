@@ -15,21 +15,13 @@
 using json = nlohmann::json;
 using namespace std;
 
-__device__ Prompt* PROMPT;
-__device__ map<string, Ingredient>* INGREDIENTS;
-__device__ map<string, RecipeModel>* RECIPE_MODELS;
+__device__ DevicePrompt* PROMPT;
+__device__ DeviceRecipeModel* SELECT_MODEL;
+__device__ thrust::device_vector<DeviceIngredient>* INGREDIENTS;
 
-Prompt* load_prompt(char* file);
-map<string, Ingredient>* load_ingredients();
-map<string, RecipeModel>* load_recipe_models();
-
-cudaError_t addWithCuda(int* c, const int* a, const int* b, unsigned int size);
-
-__global__ void addKernel(int *c, const int *a, const int *b)
-{
-    int i = threadIdx.x;
-    c[i] = a[i] + b[i];
-}
+HostPrompt* load_prompt(char* file);
+map<string, HostIngredient>* load_ingredients(bool reload);
+RecipeModel* load_recipe_model(HostPrompt* prompt);
 
 int main(int argc, char *argv[]) {
 
@@ -38,19 +30,10 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    Prompt* host_prompt = load_prompt(argv[1]);
-    auto host_ings = load_ingredients(true);
-    auto host_models = load_recipe_models();
+    HostPrompt* prompt = load_prompt("");
+    map<string, HostIngredient>* ings = load_ingredients(true);
+    fprintf(stdout, "%s", prompt->discard_conditions["spellDamage"].c_str());
 
-
-    Prompt* device_prompt_ptr;
-    cudaMalloc((void**)&device_prompt_ptr, sizeof(Prompt));
-    cudaMemcpy(device_prompt_ptr, host_prompt, sizeof(Prompt), cudaMemcpyHostToDevice);
-    cudaMemcpyToSymbol(PROMPT, &device_prompt_ptr, sizeof(Prompt*));
-
-
-
-    fprintf(stdout, "---fasfsa %d %d", PROMPT->material_tiers[0], PROMPT->material_tiers[1]);
 
     /*const int arraySize = 5;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };
@@ -59,13 +42,7 @@ int main(int argc, char *argv[]) {
 
     // Add vectors in parallel.
     cudaError_t cudaStatus = addWithCuda(c, a, b, arraySize);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "addWithCuda failed!");
-        return 1;
-    }
-
-    printf("{1,2,3,4,5} + {10,20,30,40,50} = {%d,%d,%d,%d,%d}\n",
-        c[0], c[1], c[2], c[3], c[4]);
+    
 
     // cudaDeviceReset must be called before exiting in order for profiling and
     // tracing tools such as Nsight and Visual Profiler to show complete traces.
@@ -79,7 +56,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-Prompt* load_prompt(char* file) {
+HostPrompt* load_prompt(char* file) {
     std::ifstream prompt_file("dummy.json");
     if (!prompt_file) {
         fprintf(stderr, "Couldnt open prompt file. Is it in the same directory as this executable?\n");
@@ -88,16 +65,18 @@ Prompt* load_prompt(char* file) {
     std::stringstream buffer;
     buffer << prompt_file.rdbuf();
     json j = json::parse(buffer.str());
-    Prompt prompt = j.get<Prompt>();
-
-    return &prompt;
+    HostPrompt* prompt = new HostPrompt();
+    *prompt = j.get<HostPrompt>();
+    return prompt;
 }
 
-map<string, Ingredient>* load_ingredients (bool update) {
-    
+map<string, HostIngredient>* load_ingredients (bool update) {
+    map<string, HostIngredient>* ingredients = new map<string, HostIngredient>{};
+
     if (update) {
-        if (system("data/sanitize.exe") == 0) {
-            fprintf(stderr, "Couldn't run sanitize.exe. Is is in the same directory as this executable?\n");
+        cout << "Loading ingredients table...\n";
+        if (system("sanitize.exe") != 0) {
+            cerr << "Couldn't run sanitize.exe. Is is in the same directory as this executable?\n";
             exit(1);
         }
     }
@@ -105,97 +84,29 @@ map<string, Ingredient>* load_ingredients (bool update) {
     std::ifstream sanitized("sanitized.json");
 
     if (!sanitized) {
-        fprintf(stderr, "Couldnt open ingredients file. Is it in the same directory as this executable?\n");
+        cerr << "Couldnt open ingredients file. Is it inside data directory?\n";
         exit(1);
     }
 
     std::stringstream buffer;
     buffer << sanitized.rdbuf();
     json j = json::parse(buffer.str());
-    map<string, Ingredient> ings = j.get<map<string, Ingredient>>();
-    return &ings;
+
+    for (auto& element : j.items()) {
+        json& v = element.value();
+        const string key = element.key();
+        HostIngredient hIng = v.get<HostIngredient>();
+        ingredients->insert(std::pair<string, HostIngredient>(key, hIng));
+    }
+    return ingredients;
 }
 
-map<string, RecipeModel>* load_recipe_models() {
+RecipeModel* load_recipe_model(HostPrompt* prompt) {
+
+    auto splited = split(prompt->type, "-");
+    std::transform(splited[0].begin(), splited[0].end(), splited[0].begin(),
+        [](unsigned char c) { return std::tolower(c); });
+    fprintf(stdout, splited[0].c_str());
     return NULL;
 }
 
-// Helper function for using CUDA to add vectors in parallel.
-cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
-{
-    int *dev_a = 0;
-    int *dev_b = 0;
-    int *dev_c = 0;
-    cudaError_t cudaStatus;
-
-    // Choose which GPU to run on, change this on a multi-GPU system.
-    cudaStatus = cudaSetDevice(0);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaSetDevice failed!  Do you have a CUDA-capable GPU installed?");
-        goto Error;
-    }
-
-    // Allocate GPU buffers for three vectors (two input, one output)    .
-    cudaStatus = cudaMalloc((void**)&dev_c, size * sizeof(int));
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMalloc failed!");
-        goto Error;
-    }
-
-    cudaStatus = cudaMalloc((void**)&dev_a, size * sizeof(int));
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMalloc failed!");
-        goto Error;
-    }
-
-    cudaStatus = cudaMalloc((void**)&dev_b, size * sizeof(int));
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMalloc failed!");
-        goto Error;
-    }
-
-    // Copy input vectors from host memory to GPU buffers.
-    cudaStatus = cudaMemcpy(dev_a, a, size * sizeof(int), cudaMemcpyHostToDevice);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy failed!");
-        goto Error;
-    }
-
-    cudaStatus = cudaMemcpy(dev_b, b, size * sizeof(int), cudaMemcpyHostToDevice);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy failed!");
-        goto Error;
-    }
-
-    // Launch a kernel on the GPU with one thread for each element.
-    //addKernel<<<1, size>>>(dev_c, dev_a, dev_b);
-
-    // Check for any errors launching the kernel
-    cudaStatus = cudaGetLastError();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "addKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
-        goto Error;
-    }
-    
-    // cudaDeviceSynchronize waits for the kernel to finish, and returns
-    // any errors encountered during the launch.
-    cudaStatus = cudaDeviceSynchronize();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaDeviceSynchronize returned error code %d after launching addKernel!\n", cudaStatus);
-        goto Error;
-    }
-
-    // Copy output vector from GPU buffer to host memory.
-    cudaStatus = cudaMemcpy(c, dev_c, size * sizeof(int), cudaMemcpyDeviceToHost);
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaMemcpy failed!");
-        goto Error;
-    }
-
-Error:
-    cudaFree(dev_c);
-    cudaFree(dev_a);
-    cudaFree(dev_b);
-    
-    return cudaStatus;
-}

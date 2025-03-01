@@ -7,7 +7,7 @@
 #include "identification.h"
 #include "thorium.h"
 
-using string = std::string;
+using std::string;
 
 struct PositionModifiers {
 	int left;
@@ -16,6 +16,17 @@ struct PositionModifiers {
 	int above;
 	int touching;
 	int not_touching;
+
+	NLOHMANN_DEFINE_TYPE_INTRUSIVE(
+		PositionModifiers,
+		left,
+		right,
+		under,
+		above,
+		touching,
+		not_touching
+	)
+
 };
 
 struct DeviceIngredient {
@@ -23,10 +34,10 @@ struct DeviceIngredient {
 	int duration_modifier;
 	int durability_modifier;
 	int charges_modifier;
-	int* requirement_modifiers;
+	int requirement_modifiers[5];
 	char** skills;
 	DeviceIdentification* identifications;
-	PositionModifiers* position_modifiers;
+	PositionModifiers position_modifiers;
 };
 
 
@@ -37,8 +48,21 @@ struct HostIngredient {
 	int charges_modifier;
 	std::vector<string> skills;
 	std::vector<int> requirement_modifiers;
-	std::vector<HostIdentification*> identifications;
-	PositionModifiers* position_modifiers;
+	std::vector<HostIdentification> identifications;
+	PositionModifiers position_modifiers;
+
+	NLOHMANN_DEFINE_TYPE_INTRUSIVE(
+		HostIngredient,
+		name,
+		duration_modifier,
+		durability_modifier,
+		charges_modifier,
+		skills,
+		requirement_modifiers,
+		identifications,
+		position_modifiers
+	)
+
 };
 
 DeviceIngredient* to_device_ingredient(HostIngredient* ing) {
@@ -49,16 +73,14 @@ DeviceIngredient* to_device_ingredient(HostIngredient* ing) {
 	dev_ing->durability_modifier = ing->durability_modifier;
 	dev_ing->duration_modifier = ing->duration_modifier;
 	dev_ing->position_modifiers = ing->position_modifiers;
-	dev_ing->requirement_modifiers = new int[5]{ 
-		ing->requirement_modifiers[0], 
-		ing->requirement_modifiers[1],
-		ing->requirement_modifiers[2],
-		ing->requirement_modifiers[3],
-		ing->requirement_modifiers[4],
-	};
+	dev_ing->requirement_modifiers[0] = ing->requirement_modifiers[0];
+	dev_ing->requirement_modifiers[1] = ing->requirement_modifiers[1];
+	dev_ing->requirement_modifiers[2] = ing->requirement_modifiers[2];
+	dev_ing->requirement_modifiers[3] = ing->requirement_modifiers[3];
+	dev_ing->requirement_modifiers[4] = ing->requirement_modifiers[4];
 	dev_ing->identifications = new DeviceIdentification[ing->identifications.size()];
 	for (int i = 0; i < ing->identifications.size(); i++) {
-		dev_ing->identifications[i] = *to_device_identification(ing->identifications[i]);
+		dev_ing->identifications[i] = *to_device_identification(&ing->identifications[i]);
 	}
 	return dev_ing;
 }
@@ -67,32 +89,32 @@ EffectivenessArray* get_effectiveness_array(DeviceIngredient* ing, int index) {
 	EffectivenessArray array = { 100, 100, 100, 100, 100, 100 };
 	for (int i = 0; i < 3; i++) {
 		if (AFFECTED_SLOTS[index][0][i] != 0) {
-			array[AFFECTED_SLOTS[index][0][i] - 1] += ing->position_modifiers->left;
+			array[AFFECTED_SLOTS[index][0][i] - 1] += ing->position_modifiers.left;
 		}
 	}
 	for (int i = 0; i < 3; i++) {
 		if (AFFECTED_SLOTS[index][1][i] != 0) {
-			array[AFFECTED_SLOTS[index][1][i] - 1] += ing->position_modifiers->right;
+			array[AFFECTED_SLOTS[index][1][i] - 1] += ing->position_modifiers.right;
 		}
 	}
 	for (int i = 0; i < 3; i++) {
 		if (AFFECTED_SLOTS[index][2][i] != 0) {
-			array[AFFECTED_SLOTS[index][2][i] - 1] += ing->position_modifiers->under;
+			array[AFFECTED_SLOTS[index][2][i] - 1] += ing->position_modifiers.under;
 		}
 	}
 	for (int i = 0; i < 3; i++) {
 		if (AFFECTED_SLOTS[index][3][i] != 0) {
-			array[AFFECTED_SLOTS[index][3][i] - 1] += ing->position_modifiers->above;
+			array[AFFECTED_SLOTS[index][3][i] - 1] += ing->position_modifiers.above;
 		}
 	}
 	for (int i = 0; i < 3; i++) {
 		if (AFFECTED_SLOTS[index][4][i] != 0) {
-			array[AFFECTED_SLOTS[index][4][i] - 1] += ing->position_modifiers->touching;
+			array[AFFECTED_SLOTS[index][4][i] - 1] += ing->position_modifiers.touching;
 		}
 	}
 	for (int i = 0; i < 3; i++) {
 		if (AFFECTED_SLOTS[index][6][i] != 0) {
-			array[AFFECTED_SLOTS[index][6][i] - 1] += ing->position_modifiers->not_touching;
+			array[AFFECTED_SLOTS[index][6][i] - 1] += ing->position_modifiers.not_touching;
 		}
 	}
 	return &array;

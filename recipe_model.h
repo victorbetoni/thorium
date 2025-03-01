@@ -4,7 +4,16 @@
 #include <string>
 #include <vector>
 
-using string = std::string;
+using std::string;
+
+struct DeviceRecipeModel {
+	int base_durability;
+	int base_duration;
+	int material1_amount;
+	int material2_amount;
+	int dura_min;
+	int dura_max;
+};
 
 struct RecipeModel {
 	string id;

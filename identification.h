@@ -14,6 +14,13 @@ struct HostIdentification {
 	std::string id;
 	int maximum;
 	int minimum;
+
+	NLOHMANN_DEFINE_TYPE_INTRUSIVE(
+		HostIdentification,
+		maximum,
+		minimum
+	)
+
 };
 
 DeviceIdentification* to_device_identification(HostIdentification* id) {

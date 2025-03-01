@@ -28,8 +28,8 @@ struct DevicePrompt {
 	char* type;
 	char** ingredient_whitelist;
 	int pool_size;
-	int* max_reqs;
-	int* material_tiers;
+	int max_reqs[5];
+	int material_tiers[2];
 	std::pair<char*, IdentificationConditions>* id_conditions;
 };
 
@@ -45,7 +45,6 @@ struct HostPrompt {
 	int minimum_durability;
 	bool include_all_effectiveness_items;
 
-	bool validate() const {}
 
 	NLOHMANN_DEFINE_TYPE_INTRUSIVE(
 		HostPrompt,
@@ -70,14 +69,13 @@ DevicePrompt* to_device_prompt(HostPrompt* source) {
 	prompt->ingredient_whitelist = to_device_vector(source->ingredient_whitelist);
 
 	prompt->pool_size = source->pool_size;
-	prompt->max_reqs = new int[5] {
-		source->max_reqs[0],
-			source->max_reqs[1],
-			source->max_reqs[2],
-			source->max_reqs[3],
-			source->max_reqs[4],
-	};
-	prompt->material_tiers = new int[2] { source->material_tiers[0], source->material_tiers[1] };
+	prompt->max_reqs[0] = source->max_reqs[0];
+	prompt->max_reqs[1] = source->max_reqs[1];
+	prompt->max_reqs[2] = source->max_reqs[2];
+	prompt->max_reqs[3] = source->max_reqs[3];
+	prompt->max_reqs[4] = source->max_reqs[4];
+	prompt->material_tiers[0] = source->material_tiers[0];
+	prompt->material_tiers[1] = source->material_tiers[1];
 
 	prompt->id_conditions = new pair<char*, IdentificationConditions>[source->stat_weights.size()];
 
