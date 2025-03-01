@@ -32,7 +32,8 @@ int main(int argc, char *argv[]) {
 
     HostPrompt* prompt = load_prompt("");
     map<string, HostIngredient>* ings = load_ingredients(true);
-    fprintf(stdout, "%s", prompt->discard_conditions["spellDamage"].c_str());
+    RecipeModel* model = load_recipe_model(prompt);
+    cout << model->durability_range[0] << ":" << model->durability_range[1] << endl;
 
 
     /*const int arraySize = 5;
@@ -75,7 +76,7 @@ map<string, HostIngredient>* load_ingredients (bool update) {
 
     if (update) {
         cout << "Loading ingredients table...\n";
-        if (system("sanitize.exe") != 0) {
+        if (system("sanitize.exe dummy.json") != 0) {
             cerr << "Couldn't run sanitize.exe. Is is in the same directory as this executable?\n";
             exit(1);
         }
@@ -91,7 +92,6 @@ map<string, HostIngredient>* load_ingredients (bool update) {
     std::stringstream buffer;
     buffer << sanitized.rdbuf();
     json j = json::parse(buffer.str());
-
     for (auto& element : j.items()) {
         json& v = element.value();
         const string key = element.key();
@@ -106,7 +106,43 @@ RecipeModel* load_recipe_model(HostPrompt* prompt) {
     auto splited = split(prompt->type, "-");
     std::transform(splited[0].begin(), splited[0].end(), splited[0].begin(),
         [](unsigned char c) { return std::tolower(c); });
-    fprintf(stdout, splited[0].c_str());
+    auto part = splited[0];
+
+    std::ifstream models("data/base_recipes/" + part + ".json");
+    if (!models) {
+        cerr << "Couldnt open ingredients file. Is it inside /data/base_recipes directory?\n";
+        exit(1);
+    }
+
+    std::stringstream buffer;
+    buffer << models.rdbuf();
+    json j = json::parse(buffer.str());
+    for (auto& element : j) {
+        auto levels = element["levels"];
+        for (auto& lvl : levels) {
+            auto id = lvl["id"];
+            if (id.dump().compare(splited[1] + "-" + splited[2])) {
+                RecipeModel* m = new RecipeModel();
+                m->id = id.dump();
+                m->material1_amount = element["material1Amount"].get<int>();
+                m->material1_amount = element["material2Amount"].get<int>();
+                if (lvl.contains("durationRange")) {
+                    m->hp_range.push_back(lvl["hprRange"]["minimum"].get<int>());
+                    m->hp_range.push_back(lvl["hprRange"]["maximum"].get<int>());
+                    m->durability_range.push_back(lvl["durationRange"]["minimum"].get<int>());
+                    m->durability_range.push_back(lvl["durationRange"]["maximum"].get<int>());
+                } else {
+                    m->hp_range.push_back(lvl["hpRange"]["minimum"].get<int>());
+                    m->hp_range.push_back(lvl["hpRange"]["maximum"].get<int>());
+                    m->durability_range.push_back(lvl["durabilityRange"]["minimum"].get<int>());
+                    m->durability_range.push_back(lvl["durabilityRange"]["maximum"].get<int>());
+                }
+                return m;
+            }
+        }
+    }
+
+
     return NULL;
 }
 

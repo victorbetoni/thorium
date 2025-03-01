@@ -17,13 +17,6 @@ const short AFFECTED_SLOTS[7][7][3] = {
 	{ {5}, {}, {}, {2,4}, {4,5}, {1,2,3} }  // index 5
 };
 
-const std::map<string, string> PART_TO_PROF = {
-	{"Boots", "tailoring"},
-	{"Leggings", "tailoring"},
-	{"Chestplate", "armouring"},
-	{"Helmet", "armouring"},
-};
-
 __host__ char* to_device_string(const std::string& str) {
 	char* deviceStr = new char[str.size() + 1];
 	std::copy(str.begin(), str.end(), deviceStr);

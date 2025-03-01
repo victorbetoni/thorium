@@ -6,7 +6,7 @@
   "minimum_durability": 10,
   "include_all_effectiveness_items": true,
   "ingredient_whitelist": [
-    "",""
+    "Float Stone",""
   ],
   "stat_weights": {
     "spellDamage": 1.2,

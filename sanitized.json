@@ -1,1 +1,374 @@
-[]
+[
+  {
+    "name": "Negative Rafflesia",
+    "skills": [
+      "armouring",
+      "tailoring"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": -160,
+      "right": 140,
+      "above": 0,
+      "under": 0,
+      "touching": 15,
+      "not_touching": -15
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      -10,
+      0
+    ],
+    "durability_modifier": -154,
+    "identifications": [
+      {
+        "id": "rawHealth",
+        "minimum": -650,
+        "maximum": -575
+      },
+      {
+        "id": "rawNeutralDamage",
+        "minimum": -40,
+        "maximum": -40
+      }
+    ]
+  },
+  {
+    "name": "Unsettling Void",
+    "skills": [
+      "tailoring",
+      "weaponsmithing"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": -150,
+      "right": -150,
+      "above": 0,
+      "under": 0,
+      "touching": -50,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      -25,
+      0,
+      0
+    ],
+    "durability_modifier": -149,
+    "identifications": [
+      {
+        "id": "rawSpellDamage",
+        "minimum": -55,
+        "maximum": -50
+      },
+      {
+        "id": "manaRegen",
+        "minimum": -9,
+        "maximum": -7
+      }
+    ]
+  },
+  {
+    "name": "Doom Stone",
+    "skills": [
+      "tailoring",
+      "jeweling"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": -100,
+      "right": -100,
+      "above": 60,
+      "under": 60,
+      "touching": 0,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -160,
+    "identifications": []
+  },
+  {
+    "name": "Borange Fluff",
+    "skills": [
+      "weaponsmithing",
+      "woodworking",
+      "armouring",
+      "tailoring",
+      "jeweling",
+      "cooking",
+      "alchemism",
+      "scribing"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": 0,
+      "under": 0,
+      "touching": 15,
+      "not_touching": 15
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": 0,
+    "identifications": []
+  },
+  {
+    "name": "Float Stone",
+    "skills": [
+      "tailoring"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": 0,
+      "under": 0,
+      "touching": 0,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      22
+    ],
+    "durability_modifier": -105,
+    "identifications": [
+      {
+        "id": "jumpHeight",
+        "minimum": 1,
+        "maximum": 1
+      },
+      {
+        "id": "airDamage",
+        "minimum": 10,
+        "maximum": 12
+      }
+    ]
+  },
+  {
+    "name": "Plasteel Plating",
+    "skills": [
+      "weaponsmithing",
+      "tailoring"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": -160,
+      "under": 0,
+      "touching": 0,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -154,
+    "identifications": []
+  },
+  {
+    "name": "Pride of the Heights",
+    "skills": [
+      "tailoring",
+      "woodworking",
+      "alchemism"
+    ],
+    "duration_modifier": -280,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 130,
+      "right": 0,
+      "above": 0,
+      "under": 0,
+      "touching": 0,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -157,
+    "identifications": []
+  },
+  {
+    "name": "Zealous Illuminator",
+    "skills": [
+      "armouring",
+      "tailoring",
+      "weaponsmithing",
+      "woodworking"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": 0,
+      "under": 0,
+      "touching": 25,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -97,
+    "identifications": [
+      {
+        "id": "rawMainAttackDamage",
+        "minimum": 55,
+        "maximum": 60
+      }
+    ]
+  },
+  {
+    "name": "Major's Badge",
+    "skills": [
+      "armouring",
+      "tailoring",
+      "weaponsmithing",
+      "woodworking",
+      "jeweling",
+      "alchemism"
+    ],
+    "duration_modifier": -300,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": -15,
+      "right": -180,
+      "above": -110,
+      "under": -20,
+      "touching": 35,
+      "not_touching": -30
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -175,
+    "identifications": []
+  },
+  {
+    "name": "Decaying Heart",
+    "skills": [
+      "tailoring",
+      "armouring"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": 0,
+      "under": 0,
+      "touching": -100,
+      "not_touching": 60
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -175,
+    "identifications": []
+  },
+  {
+    "name": "Familiar Essence",
+    "skills": [
+      "armouring",
+      "tailoring"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": 0,
+      "under": 0,
+      "touching": -40,
+      "not_touching": -40
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -40,
+    "identifications": [
+      {
+        "id": "manaRegen",
+        "minimum": 6,
+        "maximum": 6
+      }
+    ]
+  },
+  {
+    "name": "Bob's Tear",
+    "skills": [
+      "jeweling",
+      "tailoring",
+      "armouring",
+      "woodworking",
+      "weaponsmithing"
+    ],
+    "duration_modifier": 0,
+    "charges_modifier": 0,
+    "position_modifiers": {
+      "left": 0,
+      "right": 0,
+      "above": 0,
+      "under": 25,
+      "touching": 0,
+      "not_touching": 0
+    },
+    "requirement_modifiers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "durability_modifier": -30,
+    "identifications": []
+  }
+]
