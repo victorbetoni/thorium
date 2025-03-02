@@ -77,15 +77,15 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <CudaCompile Include="crafter.cu" />
     <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="compat.cu" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="identification.h" />
-    <ClInclude Include="ingredient.h" />
-    <ClInclude Include="prompt.h" />
-    <ClInclude Include="recipe.h" />
-    <ClInclude Include="recipe_model.h" />
-    <ClInclude Include="thorium.h" />
+    <ClInclude Include="compat.h" />
+    <ClInclude Include="craft.h" />
+    <ClInclude Include="device.h" />
+    <ClInclude Include="host.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dummy.json" />

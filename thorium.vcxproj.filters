@@ -2,35 +2,43 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CudaCompile Include="kernel.cu" />
-    <CudaCompile Include="map.cu" />
+    <CudaCompile Include="crafter.cu">
+      <Filter>Craft</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="thorium.h" />
-    <ClInclude Include="identification.h">
-      <Filter>Item</Filter>
+    <ClInclude Include="craft.h">
+      <Filter>Craft</Filter>
     </ClInclude>
-    <ClInclude Include="ingredient.h">
-      <Filter>Item</Filter>
+    <ClInclude Include="compat.h">
+      <Filter>Compat</Filter>
     </ClInclude>
-    <ClInclude Include="recipe_model.h">
-      <Filter>Recipe</Filter>
+    <ClInclude Include="compat.cu">
+      <Filter>Compat</Filter>
     </ClInclude>
-    <ClInclude Include="recipe.h">
-      <Filter>Recipe</Filter>
+    <ClInclude Include="host.h">
+      <Filter>Host</Filter>
     </ClInclude>
-    <ClInclude Include="prompt.h">
-      <Filter>Prompt</Filter>
+    <ClInclude Include="device.h">
+      <Filter>Device</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Item">
-      <UniqueIdentifier>{23ed708f-c853-4d85-a5cc-952859dc8241}</UniqueIdentifier>
+    <Filter Include="Craft">
+      <UniqueIdentifier>{dc9211af-1416-4827-8c94-d701caf01d43}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Recipe">
-      <UniqueIdentifier>{b9234665-5ee9-467e-b6b3-b604e1722d69}</UniqueIdentifier>
+    <Filter Include="Compat">
+      <UniqueIdentifier>{15db159e-7199-4a5c-bf14-fffe3545dfbe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Prompt">
-      <UniqueIdentifier>{a59be8ae-2759-47f3-939c-543e727871a9}</UniqueIdentifier>
+    <Filter Include="Host">
+      <UniqueIdentifier>{eb9bca42-1ed6-416d-836a-ed724bc16c10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Device">
+      <UniqueIdentifier>{a7b6c035-c65b-4776-9911-4aa03e0fea48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dummy.json" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

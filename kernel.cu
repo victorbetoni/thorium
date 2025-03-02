@@ -2,9 +2,8 @@
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
-#include "prompt.h"
-#include "ingredient.h"
-#include "recipe_model.h"
+#include <thrust/device_vector.h>
+#include "compat.h"
 
 #include <sstream>
 #include <fstream>
@@ -15,13 +14,28 @@
 using json = nlohmann::json;
 using namespace std;
 
+using DeviceIdentification = dvc::DeviceIdentification;
+using DevicePrompt = dvc::DevicePrompt;
+using DeviceIngredient = dvc::DeviceIngredient;
+using DeviceEffectivenessArray = dvc::DeviceEffectivenessArray;
+using DeviceRecipeModel = dvc::DeviceRecipeModel;
+
+using HostIdentification = host::HostIdentification;
+using HostPrompt = host::HostPrompt;
+using HostIngredient = host::HostIngredient;
+using HostRecipeModel = host::HostRecipeModel;
+
 __device__ DevicePrompt* PROMPT;
-__device__ DeviceRecipeModel* SELECT_MODEL;
+__device__ DeviceRecipeModel* SELECTED_MODEL;
 __device__ thrust::device_vector<DeviceIngredient>* INGREDIENTS;
 
 HostPrompt* load_prompt(char* file);
 map<string, HostIngredient>* load_ingredients(bool reload);
-RecipeModel* load_recipe_model(HostPrompt* prompt);
+HostRecipeModel* load_recipe_model(HostPrompt* prompt);
+
+__global__ void combineCrafts(int* A, int* B, int* C, int N) {
+    
+}
 
 int main(int argc, char *argv[]) {
 
@@ -32,28 +46,17 @@ int main(int argc, char *argv[]) {
 
     HostPrompt* prompt = load_prompt("");
     map<string, HostIngredient>* ings = load_ingredients(true);
-    RecipeModel* model = load_recipe_model(prompt);
-    cout << model->durability_range[0] << ":" << model->durability_range[1] << endl;
+    HostRecipeModel* model = load_recipe_model(prompt);
+
+    DevicePrompt* dPrompt = compat::to_device_prompt(*prompt);
+    DeviceRecipeModel* dRecipeModel = compat::to_device_recipe_model(*model);
+
+    cudaMemcpyToSymbol(PROMPT, dPrompt, sizeof(dPrompt), 0, cudaMemcpyHostToDevice);
+    cudaMemcpyToSymbol(SELECTED_MODEL, dRecipeModel, sizeof(dRecipeModel), 0, cudaMemcpyHostToDevice);
 
 
-    /*const int arraySize = 5;
-    const int a[arraySize] = { 1, 2, 3, 4, 5 };
-    const int b[arraySize] = { 10, 20, 30, 40, 50 };
-    int c[arraySize] = { 0 };
 
-    // Add vectors in parallel.
-    cudaError_t cudaStatus = addWithCuda(c, a, b, arraySize);
-    
-
-    // cudaDeviceReset must be called before exiting in order for profiling and
-    // tracing tools such as Nsight and Visual Profiler to show complete traces.
-    cudaStatus = cudaDeviceReset();
-    if (cudaStatus != cudaSuccess) {
-        fprintf(stderr, "cudaDeviceReset failed!");
-        return 1;
-    }
-    */
-
+    cudaDeviceSynchronize();
     return 0;
 }
 
@@ -101,9 +104,9 @@ map<string, HostIngredient>* load_ingredients (bool update) {
     return ingredients;
 }
 
-RecipeModel* load_recipe_model(HostPrompt* prompt) {
+HostRecipeModel* load_recipe_model(HostPrompt* prompt) {
 
-    auto splited = split(prompt->type, "-");
+    auto splited = compat::split(prompt->type, "-");
     std::transform(splited[0].begin(), splited[0].end(), splited[0].begin(),
         [](unsigned char c) { return std::tolower(c); });
     auto part = splited[0];
@@ -122,7 +125,7 @@ RecipeModel* load_recipe_model(HostPrompt* prompt) {
         for (auto& lvl : levels) {
             auto id = lvl["id"];
             if (id.dump().compare(splited[1] + "-" + splited[2])) {
-                RecipeModel* m = new RecipeModel();
+                HostRecipeModel* m = new HostRecipeModel();
                 m->id = id.dump();
                 m->material1_amount = element["material1Amount"].get<int>();
                 m->material1_amount = element["material2Amount"].get<int>();
