@@ -5,15 +5,15 @@
     <CudaCompile Include="crafter.cu">
       <Filter>Craft</Filter>
     </CudaCompile>
+    <CudaCompile Include="compat.cu">
+      <Filter>Compat</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="craft.h">
       <Filter>Craft</Filter>
     </ClInclude>
     <ClInclude Include="compat.h">
-      <Filter>Compat</Filter>
-    </ClInclude>
-    <ClInclude Include="compat.cu">
       <Filter>Compat</Filter>
     </ClInclude>
     <ClInclude Include="host.h">
