@@ -40,6 +40,8 @@ namespace compat {
 
 	__host__  std::vector<std::string> split(const std::string& str, const std::string& delimiter);
 
+	__device__ int compare_str(const char* str1, const char* str2);
+
 	__device__ void sum_effectiveness_array(DeviceEffectivenessArray& arr1, DeviceEffectivenessArray& arr2);
 
 	__device__ DeviceEffectivenessArray* get_effectiveness_array(DeviceIngredient& ing, int index);
